@@ -35,8 +35,7 @@ async def hello(ctx):
 
 @bot.tree.command(name="avatar",description="Get user avatar")
 async def avatar(interaction:discord.Interaction,member:discord.Member):
-    await interaction.response.send_message(member.mention)
-    await interaction.response.send_message(member.display_avatar)
+    await interaction.response.send_message(f"{member.mention} {member.display_avatar}")
 
 @bot.tree.command(name="drachenlord",description="Erkläre was das ist")
 async def slash_command(interaction:discord.Interaction):
